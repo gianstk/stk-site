@@ -3,11 +3,17 @@
 }
 
 p {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 150px;
+  padding-right: 150px;
   text-align: justify;
 }
 
 .mainContainer {
   padding-top: 30px;
+}
+
+.koi {
+  width: 350px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

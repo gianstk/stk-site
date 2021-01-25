@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 
-import { Container } from 'semantic-ui-react'
 import './About.css';
+// import koi from '../../public/illustrator/koiWave.png';
 
 class About extends Component {
   render() {
     return (
         <div className="About">
           <div className="mainContainer">
-              <h1>About Suebtrakul</h1>
-              <p>Hi, I am Suebtrakul but people call me Gian. I recent graduated Thai computer engineer in Sydney who is passionated in blending the arts and technologies to be one.</p>
+
+              <img className="koi" src={window.location.origin + '/illustrator/koiWave.png'} />
+
+              <h1>Suebtrakul : Gian</h1>
+              <p>I am Suebtrakul. I know it sounds weird lol but all Thai people always has a long name like this. Well actually... just call me Gian. I am a recent graduated computer engineer in Sydney who is passionated in blending the arts and technologies to be one.</p>
 
               <h2>My life journey</h2>
               <p>I was born and raised in Bangkok, Thailand. When I finished my high school, I went to faculty of electrical engineering at Thammasat University, where I had a chance to playing around with hardware programming (Arduino) which mainly influenced me to explore more on the software world and then transfer to Computer engineering degree at University of New South Wales, Sydney, in 2018.</p>

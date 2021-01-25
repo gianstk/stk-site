@@ -16,7 +16,7 @@ import Home from './Home/Home';
 import About from './About/About';
 import LoginForm from './Login/Login';
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 
