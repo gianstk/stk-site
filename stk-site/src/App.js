@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import 'semantic-ui-css/semantic.min.css'
+
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -9,20 +10,10 @@ import {
   Link
 } from 'react-router-dom';
 
-import {
-  Button,
-  Sidebar,
-  Menu,
-  Segment,
-  Icon,
-  Header,
-  Image,
-} from 'semantic-ui-react';
-
 
 import NavBar from './NavBar/NavBar';
 import Home from './Home/Home';
-import About from './About';
+import About from './About/About';
 import LoginForm from './Login/Login';
 
 import logo from './logo.svg';
@@ -38,19 +29,9 @@ class App extends Component {
 
   render() {
     return (
-
       <Router>
 
-        {/* <NavBar/> */}
-
-
-        <nav>
-          <ui>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/login">Login</Link></li>
-          </ui>
-        </nav>
+        <NavBar/>
 
         <Switch>
           <Route exact path='/' component={Home} />

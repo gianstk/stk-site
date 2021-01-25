@@ -1,0 +1,13 @@
+.About {
+  text-align: center;
+}
+
+p {
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: justify;
+}
+
+.mainContainer {
+  padding-top: 30px;
+}
