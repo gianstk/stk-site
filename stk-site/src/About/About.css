@@ -3,8 +3,8 @@
 }
 
 p {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 120px;
+  padding-right: 120px;
   text-align: justify;
 }
 
@@ -16,4 +16,22 @@ p {
   width: 350px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+
+.About-transition-enter {
+  opacity: 0;
+}
+
+.About-transition-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+
+.About-transition-exit {
+  opacity: 1;
+}
+.About-transition-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms;
 }

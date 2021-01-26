@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+.Home-transition-enter {
+  opacity: 0;
+}
+
+.Home-transition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.Home-transition-exit {
+  opacity: 1;
+}
+.Home-transition-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+
 p {
   padding-left: 80px;
   padding-right: 80px;
