@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css'
 import {
   Menu,
+  Grid,
 } from 'semantic-ui-react';
 
 import { 
@@ -18,51 +19,61 @@ export default class NavBar extends Component {
   render() {
     const { activeItem } = this.state
     return (
-      <div>
-        <Menu pointing secondary>
-          <Menu.Item
-            name='Suebtrakul'
-            as={ Link }
-            to=''
-            active={activeItem === 'Suebtrakul'}
-            onClick={this.handleItemClick}
-          />
+      <Grid>
+        <Grid.Row>
+          <Grid.Column width={4}></Grid.Column>
+          <Grid.Column width={8} textAlign="center">
+            <Menu pointing secondary fluid size="huge" widths={4}>
+            <Menu.Item position="left"
+              width={2}
+              name='Suebtrakul'
+              as={ Link }
+              to=''
+              active={activeItem === 'Suebtrakul'}
+              onClick={this.handleItemClick}
+              huge
+            />
 
-          <Menu.Item
-            name='projects'
-            as={ Link }
-            to='projects'
-            active={activeItem === 'projects'}
-            onClick={this.handleItemClick}
-          />
+            <Menu.Item position="left"
+              width={2}
+              name='projects'
+              as={ Link }
+              to='projects'
+              active={activeItem === 'projects'}
+              onClick={this.handleItemClick}
+            />
 
-          <Menu.Item
-            name='art gallery'
-            as={ Link }
-            to='gallery'
-            active={activeItem === 'art gallery'}
-            onClick={this.handleItemClick}
-          />
+            <Menu.Item position="right"
+              width={2}
+              name='art gallery'
+              as={ Link }
+              to='gallery'
+              active={activeItem === 'art gallery'}
+              onClick={this.handleItemClick}
+            />
 
-          <Menu.Item
-            name='me'
-            as={ Link }
-            to='about'
-            active={activeItem === 'me'}
-            onClick={this.handleItemClick}
-          />
+            <Menu.Item position="right"
+              width={2}
+              name='me'
+              as={ Link }
+              to='about'
+              active={activeItem === 'me'}
+              onClick={this.handleItemClick}
+            />
 
-          <Menu.Item position='right'
-            name='login'
-            as={ Link }
-            to='login'
-            active={activeItem === 'login'}
-            onClick={this.handleItemClick}
-          />
-        </Menu>
+            {/* <Menu.Item position="right"
+              name='login'
+              as={ Link }
+              to='login'
+              active={activeItem === 'login'}
+              onClick={this.handleItemClick}
+            /> */}
+          </Menu>
+          </Grid.Column>
+          <Grid.Column width={4}></Grid.Column>
+        </Grid.Row>
+      </Grid>
         
-        
-      </div>
     )
   }
   

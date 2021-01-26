@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './About.css';
 import { CSSTransition } from 'react-transition-group';
+import { Grid, Image, Container, Header, Segment } from 'semantic-ui-react';
 
 // import koi from '../../public/illustrator/koiWave.png';
 
@@ -16,7 +17,6 @@ class About extends Component {
     });
   }
 
-
   render() {   
       return (
           <CSSTransition
@@ -29,26 +29,35 @@ class About extends Component {
                           onEnter={() => console.log("Enter!", this.state)}
                           onExited={() => console.log("Exit!", this.state)}
                         >
-            
+              <Segment style={{ padding: '8em 0em' }} vertical>
+                <Grid centered stackable verticalAlign='middle'>
+                  <Grid.Row>
+                    
+                    <Grid.Column floated='right' width={6}>
+                      <Container fluid>
+                        <Image src={window.location.origin + '/profile.jpg'} className="img-profile" centered/>  
+                      </Container>                      
+                    </Grid.Column>
 
-            <div className="About">
-              <div className="mainContainer">
-                  <img src={window.location.origin + '/illustrator/koiWave.png'} className="koi"/>
 
-                  <h1>Suebtrakul : Gian</h1>
-                  <p>I am Suebtrakul. I know it sounds weird lol but all Thai people always has a long name like this. Well actually... just call me Gian. I am a recent graduated computer engineer in Sydney who is passionated in blending the arts and technologies to be one.</p>
+                    <Grid.Column floated='left' width={6}>
+                      <Container text>
+                        <Header as='h1' style={{fontSize: '3em', leftPadding: '8em'}}>Gian | Suebtrakul</Header>
+                        <p style={{ fontSize: '1.2em', textAlign: 'justify' }}>Gian is a software engineer and illustrator, being passionated in learning new technologies and applying them to enhance the way we live as he is looking forward to world where there are no boundaries and inequality as everone has been facilitated by technological developments. Additionally, he does believe that both logic from the science side should always come with the creativity from the arts and designs to reach the full potential of the new inventions.</p>
+                        <p style={{ fontSize: '1.2em', textAlign: 'justify' }}>Being raised in Bangkok for almost the whole life and then moving to Sydney to broad his mind and knowledge, he got opportunities to learn various trends of technology such as Web Application Development, Machine Learning, and especially Blockchain & Decentralized Services. This seems to be one of the technologies that could entirely change the way we live when there is no monopoly in digital assets (such as personal data in social network platform these days).</p>
+                      </Container>
+                    </Grid.Column>
 
-                  <h2>My life journey</h2>
-                  <p>I was born and raised in Bangkok, Thailand. When I finished my high school, I went to faculty of electrical engineering at Thammasat University, where I had a chance to playing around with hardware programming (Arduino) which mainly influenced me to explore more on the software world and then transfer to Computer engineering degree at University of New South Wales, Sydney, in 2018.</p>
-                  <p>3 years of fully academic life in Australia at UNSW, I got opportunities to learn and work on different areas such as web application, machine learning, and especially Blockchain technology & decentralized services. Just imagining how our life could be changed significantly if there is a way to maintain the existing services but still able to fully protect the digital assets, I decided to dive deeper in my thesis in the topic of “Decentralized Data Sharing in Web 3.0: SOLID and Blockchains” with <a href="https://helen-paik.net/">Dr. Helen Paik (UNSW, Australia)</a> and Dr. Sherry Xu (Data61, Australia) in 2019.</p>
-                  <p>Apart form the academic field, I have my own personal interest and have been working as an illustrator and graphic designer in some marketing and creative teams at <a href="https://www.csesoc.unsw.edu.au/">CSESOC</a> and <a href="https://bluesat.com.au/">BLUESAT</a> at UNSW. You can enjoy some of my works on <a href="https://dribbble.com/gianstk">my dribble...</a></p>
+                  </Grid.Row>
 
-                  <h2>Present and the near future</h2>
-                  <p>I currently work as a software engineer at CleanSpace Technology taking care of the mobile application development in both iOS (Swift) and android (Android Studio). I probably stay here and keep learning. Then at one point of my life, according to my interests in computer science and arts, I want to become a better engineer and designer that could blend 2 areas at once.</p>
-              </div>
-            </div>
+                  <Grid.Row style={{paddingTop: '3em'}}>
+                    ALSKDJALKSJDLKAJSD
+                  </Grid.Row>
+                </Grid>
+              </Segment>
+
           </CSSTransition>
-      ); 
+      );
     
 
 
